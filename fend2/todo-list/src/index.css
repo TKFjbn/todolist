@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+
+    /*SideBar*/
+
+    .sidebar {
+        @apply fixed top-0 left-0 h-screen w-16 m-0 
+        flex-initial flex-col 
+        bg-primary text-secondary z-20;
+    }
+
+    .sidebar-icon {
+        @apply  relative flex items-center justify-center
+        h-12 w-12 mt-2 mb-2 mx-auto
+        bg-gray-800 text-green-500
+        hover:bg-green-600 hover:text-white
+        rounded-3xl hover:rounded-xl
+        transition-all duration-300 ease-linear
+        cursor-pointer;
+    }
+
+    .sidebar-tooltip {
+        @apply absolute w-auto p-2 m-2 min-w-max left-14 rounded-md shadow-md
+        text-white bg-gray-900 
+        text-xs font-bold 
+        transition-all duration-100 scale-0 origin-left;
+    }
+
+    .sidebar-hr {
+        @apply bg-gray-200 dark:bg-gray-900 
+        border border-gray-200 dark:border-gray-900 rounded-full
+        mx-2;
+    }
+    
+
+    /*ContentContainer*/
+
+    .content-header {
+        @apply h-10 flex items-center justify-center
+    }
+
+    .task-conteiner {
+        @apply flex-initial h-auto w-64 min-w-max ml-5 mr-5 mt-3.5 
+        bg-gray-800 text-primary  
+        border-amber-600 border-l-4 rounded-r-lg rounded-l-lg z-10;
+    }
+
+    .bg-container {
+        @apply h-screen w-screen ml-16 bg-gray-700 bg-scroll;
+    }
+
+    /*form todo*/
+
+    .form-container {
+        @apply h-10 flex justify-center items-center;
+    }
+
+    .form-imput {
+        @apply bg-gray-900 text-secondary h-7
+        hover:bg-gray-600;
+    }
+
+    .form-btn {
+        @apply flex justify-center items-center
+        text-gray-300 hover:text-gray-400 disabled:text-gray-900
+        disabled:cursor-not-allowed enabled:cursor-pointer;
+    }
+
+    /*checkbox*/
+    
+    .lbl-chbx {
+        @apply flex justify-center 
+        text-secondary ml-6 mr-6 hover:bg-gray-700 rounded-r-lg rounded-l-lg;
+    }
+
+    .task-text {
+        @apply text-lg
+    }
+
+    
+
+
+
+}

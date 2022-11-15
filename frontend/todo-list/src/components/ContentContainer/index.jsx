@@ -1,4 +1,4 @@
-//Content Container, aqui se encuentra todo el contenido del tasklist 
+//Content Container, aqui se encuentra todo el contenido del tasklist, como crear o eliminar listas y agregar un nombre a la tarjeta. 
 
 import React, {useState} from 'react'
 import ContentHeader from '../ContentHeader';
@@ -7,6 +7,8 @@ import FormTodo from '../FormTodo';
 import TaskList from '../TaskList';
 
 const ContentContainer = () => {
+
+    
     const [list, setList] = useState([]);
 
     const handleAddItem = addItem => {

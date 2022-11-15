@@ -39,7 +39,7 @@
     /*ContentContainer*/
 
     .content-header {
-        @apply h-10 flex items-center justify-center
+        @apply h-auto mt-2 mb-2 flex items-center justify-center
     }
 
     .task-conteiner {

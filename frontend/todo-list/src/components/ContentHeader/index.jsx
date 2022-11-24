@@ -6,10 +6,9 @@ import FormHeader from '../FormHeader';
 
 const ContentHeader = () => {
     
-
     return (
         <div className='content-header'>
-            <FormHeader/><>{/*formulario para cambiar el nombre de la tarjeta*/}</>
+            <FormHeader /><>{/*formulario para cambiar el nombre de la tarjeta*/}</>
         </div>
     )
 };

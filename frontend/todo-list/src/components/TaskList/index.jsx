@@ -6,14 +6,14 @@ import Checkbox from '../CheckBox';
 
 const TaskList = props => {
     const {list, setList} = props;
-
-    //eliminar items del tasklist
+    
+    //eliminar items del tasklist, filtra los items que no estan listos y borra los que estan listos, para luego actualizar la lista
     const onClickRemoveItem = e => {
         const updateList = list.filter(item => !item.done);
         setList(updateList);
     };
 
-    
+    //si el checkbox esta en estado checked
     const onChangeStatus = e => {
         const { name, checked } = e.target;
         const updateList = list.map(item => ({
@@ -23,6 +23,7 @@ const TaskList = props => {
 
         setList(updateList);
     };
+
 
     const chkbox = list.map(item => (
         <Checkbox key={item.id} data={item} onChange={onChangeStatus}/>

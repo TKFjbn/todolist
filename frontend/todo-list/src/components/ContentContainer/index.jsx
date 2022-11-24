@@ -1,26 +1,32 @@
 //Content Container, aqui se encuentra todo el contenido del tasklist, como crear o eliminar listas y agregar un nombre a la tarjeta. 
+//crear card container que seria similar a contentcontainer
 
 import React, {useState} from 'react'
-import ContentHeader from '../ContentHeader';
 
+import ContentHeader from '../ContentHeader';
 import FormTodo from '../FormTodo';
 import TaskList from '../TaskList';
 
-const ContentContainer = () => {
+const ContentContainer = props => {
 
-    
+
     const [list, setList] = useState([]);
 
     const handleAddItem = addItem => {
         setList([...list, addItem]);
     };
 
+    const {
+        data: {id}
+    } = props;
+
+
     
     return (
         <>
-        <div className='h-screen border-2 border-red-700 flex items-start justify-center'>
+        <div className='h-screen border-2 border-red-700 flex items-start justify-center' >
             {/*contenedor tasklist*/}
-            <div className='task-conteiner'>
+            <div className='task-conteiner' name={id}>
                 <ContentHeader/>
                 <Divider/>
                 <FormTodo handleAddItem={handleAddItem}/>

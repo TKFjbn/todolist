@@ -13,6 +13,7 @@ const FormTodo = props => {
             id: (+new Date()).toString(),
             description
         });
+        
         setDescription("");
     };
 

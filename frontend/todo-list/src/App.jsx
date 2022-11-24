@@ -17,21 +17,23 @@
 
 */
 
+//import useFetch from "react-fetch-hook";
+import React, {useState} from "react";
+import CardContainer from "./components/CardContainer";
 
-import ContentContainer from "./components/ContentContainer";
-import SideBar from "./components/SideBar";
 
 const App = () => {
+  
+  const [Cardlist, setCardList] = useState([]);
+
   return (
-      <>
-      <div className='flex'>
-        <SideBar/> 
-        <div className="fixed bg-gray-700 w-screen h-screen z-0"></div>
-        <div className="ml-36"/>
-        <ContentContainer/><>{/*cambiar por Cardlist junto con lo de arriba ya que tendra el fondo y las tarjetas*/}</>
-      </div>
-      </>
+    <>
+    <div className='flex'>
+      <CardContainer Cardlist={Cardlist} setCardList={setCardList}/>
+    </div>
+    </>
   );
+  //<CardList/>
 }
 
 export default App;

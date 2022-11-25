@@ -10,9 +10,8 @@ const CardContainer = props => {
         setcardList([...cardList, addCard]);
     };
 
-
     return (
-        <div>
+        <div className=''>
             <SideBar handleAddCard={handleAddCard}/>
             <div className="fixed bg-gray-700 w-screen h-screen z-0"></div>
             <CardList cardList={cardList} setCardList={setcardList} />

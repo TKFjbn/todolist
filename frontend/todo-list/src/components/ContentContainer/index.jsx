@@ -9,7 +9,6 @@ import TaskList from '../TaskList';
 
 const ContentContainer = props => {
 
-
     const [list, setList] = useState([]);
 
     const handleAddItem = addItem => {
@@ -20,11 +19,9 @@ const ContentContainer = props => {
         data: {id}
     } = props;
 
-
-    
     return (
         <>
-        <div className='h-screen border-2 border-red-700 flex items-start justify-center' >
+        <div className='content-container'>
             {/*contenedor tasklist*/}
             <div className='task-conteiner' name={id}>
                 <ContentHeader/>

@@ -10,7 +10,6 @@ const FormHeader = props => {
 
     const [titulo, setTitulo] = useState("");
 
-    
     const {handleAddTitle} = props;
     const handleSubmit = e => {
         e.preventDefault();
@@ -23,9 +22,14 @@ const FormHeader = props => {
         setTitulo("");
     }
 
+    const editMode = () => {
+        console.log("modo editar");
+    }
+
     //formulario que cambia el nombre de la tarjeta.
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} onDoubleClick={editMode}>
+
             <div className='flex flex-nowrap'>
                 <input 
                 type='text' 

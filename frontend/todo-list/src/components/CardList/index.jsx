@@ -13,7 +13,6 @@ import { IoIosAddCircle } from 'react-icons/io';
 
 //agregar tarjetas en un map
 const CardList = props => {
-    //const [cardList, SetCardList] = useState([]);
     const {cardList} = props;
 
     const crds = cardList.map(post =>(
@@ -21,13 +20,12 @@ const CardList = props => {
     ))
 
     return (
-        <div className='flex ml-36'>
+        <div className='flex ml-16 '>
             {cardList?.length ? crds : (<>
-                <p className='w-screen h-screen flex items-center justify-center mb-4 text-secondary z-10'>
+                <p className='card-alert'>
                     No hay tarjetas. Agregar una nueva con
                     <IoIosAddCircle size="22" />
                 </p>
-                
             </>)}
         </div>
     )

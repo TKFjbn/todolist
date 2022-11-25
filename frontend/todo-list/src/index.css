@@ -2,14 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+html, 
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
 @layer components {
 
     /*SideBar*/
 
     .sidebar {
-        @apply fixed top-0 left-0 h-screen w-16 m-0 
+        @apply flex fixed top-0 left-0 h-screen w-16 m-0 
         flex-initial flex-col 
-        bg-primary text-secondary z-20;
+        bg-primary text-secondary z-20
+        ;
+        
     }
 
     .sidebar-icon {
@@ -36,10 +47,20 @@
     }
     
 
-    /*ContentContainer*/
+    /*CardList*/
+
+    .card-alert {
+        @apply w-screen h-screen flex items-center justify-center text-secondary z-10
+    }
+
+    .content-container {
+        @apply flex flex-wrap items-start justify-center h-screen 
+        border-2 border-red-700;
+        
+    }
 
     .content-header {
-        @apply h-auto mt-2 mb-2 flex items-center justify-center
+        @apply h-auto mt-2 mb-2 flex items-center justify-center;
     }
 
     .task-conteiner {
